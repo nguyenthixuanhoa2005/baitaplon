@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanlisachcobanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Author">
+    <Key>
+      <PropertyRef Name="author_id" />
+    </Key>
+    <Property Name="author_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Books" Relationship="Self.BookAuthors" FromRole="Author" ToRole="Books" />
+  </EntityType>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="book_id" />
+    </Key>
+    <Property Name="book_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="categorie_id" Type="Int64" />
+    <Property Name="year" Type="Int32" />
+    <Property Name="total" Type="Int32" />
+    <Property Name="available" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Category" Relationship="Self.FK__Books__categorie__5441852A" FromRole="Books" ToRole="Categories" />
+    <NavigationProperty Name="LoansItems" Relationship="Self.FK__LoansItem__book___5FB337D6" FromRole="Books" ToRole="LoansItems" />
+    <NavigationProperty Name="Reservations" Relationship="Self.FK__Reservati__book___6383C8BA" FromRole="Books" ToRole="Reservation" />
+    <NavigationProperty Name="Authors" Relationship="Self.BookAuthors" FromRole="Books" ToRole="Author" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="categorie_id" />
+    </Key>
+    <Property Name="categorie_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Books" Relationship="Self.FK__Books__categorie__5441852A" FromRole="Categories" ToRole="Books" />
+  </EntityType>
+  <EntityType Name="Loan">
+    <Key>
+      <PropertyRef Name="Loan_id" />
+    </Key>
+    <Property Name="Loan_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="member_id" Type="Int64" />
+    <Property Name="loan_date" Type="DateTime" Precision="0" />
+    <Property Name="due_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="return_date" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="user_id" Type="Int64" />
+    <NavigationProperty Name="Member" Relationship="Self.FK__Loans__member_id__5AEE82B9" FromRole="Loans" ToRole="Members" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Loans__user_id__5BE2A6F2" FromRole="Loans" ToRole="Users" />
+    <NavigationProperty Name="LoansItems" Relationship="Self.FK__LoansItem__loan___5EBF139D" FromRole="Loans" ToRole="LoansItems" />
+  </EntityType>
+  <EntityType Name="LoansItem">
+    <Key>
+      <PropertyRef Name="loan_item_id" />
+    </Key>
+    <Property Name="loan_item_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="loan_id" Type="Int64" />
+    <Property Name="book_id" Type="Int64" />
+    <Property Name="return_date" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Book" Relationship="Self.FK__LoansItem__book___5FB337D6" FromRole="LoansItems" ToRole="Books" />
+    <NavigationProperty Name="Loan" Relationship="Self.FK__LoansItem__loan___5EBF139D" FromRole="LoansItems" ToRole="Loans" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="member_id" />
+    </Key>
+    <Property Name="member_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int64" />
+    <Property Name="card_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date_to" Type="DateTime" Precision="0" />
+    <Property Name="date_since" Type="DateTime" Precision="0" />
+    <Property Name="phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Boolean" />
+    <NavigationProperty Name="Loans" Relationship="Self.FK__Loans__member_id__5AEE82B9" FromRole="Members" ToRole="Loans" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Members__user_id__4F7CD00D" FromRole="Members" ToRole="Users" />
+    <NavigationProperty Name="Reservations" Relationship="Self.FK__Reservati__membe__628FA481" FromRole="Members" ToRole="Reservation" />
+  </EntityType>
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="reservation_id" />
+    </Key>
+    <Property Name="reservation_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="member_id" Type="Int64" />
+    <Property Name="book_id" Type="Int64" />
+    <Property Name="reserved_date" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Book" Relationship="Self.FK__Reservati__book___6383C8BA" FromRole="Reservation" ToRole="Books" />
+    <NavigationProperty Name="Member" Relationship="Self.FK__Reservati__membe__628FA481" FromRole="Reservation" ToRole="Members" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int64" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Loans" Relationship="Self.FK__Loans__user_id__5BE2A6F2" FromRole="Users" ToRole="Loans" />
+    <NavigationProperty Name="Members" Relationship="Self.FK__Members__user_id__4F7CD00D" FromRole="Users" ToRole="Members" />
+  </EntityType>
+  <Association Name="FK__Books__categorie__5441852A">
+    <End Role="Categories" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="Books" Type="Self.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="categorie_id" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="categorie_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LoansItem__book___5FB337D6">
+    <End Role="Books" Type="Self.Book" Multiplicity="0..1" />
+    <End Role="LoansItems" Type="Self.LoansItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="book_id" />
+      </Principal>
+      <Dependent Role="LoansItems">
+        <PropertyRef Name="book_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reservati__book___6383C8BA">
+    <End Role="Books" Type="Self.Book" Multiplicity="0..1" />
+    <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="book_id" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="book_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Loans__member_id__5AEE82B9">
+    <End Role="Members" Type="Self.Member" Multiplicity="0..1" />
+    <End Role="Loans" Type="Self.Loan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="member_id" />
+      </Principal>
+      <Dependent Role="Loans">
+        <PropertyRef Name="member_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Loans__user_id__5BE2A6F2">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Loans" Type="Self.Loan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="Loans">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LoansItem__loan___5EBF139D">
+    <End Role="Loans" Type="Self.Loan" Multiplicity="0..1" />
+    <End Role="LoansItems" Type="Self.LoansItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loans">
+        <PropertyRef Name="Loan_id" />
+      </Principal>
+      <Dependent Role="LoansItems">
+        <PropertyRef Name="loan_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Members__user_id__4F7CD00D">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Members" Type="Self.Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="Members">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reservati__membe__628FA481">
+    <End Role="Members" Type="Self.Member" Multiplicity="0..1" />
+    <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="member_id" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="member_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BookAuthors">
+    <End Role="Author" Type="Self.Author" Multiplicity="*" />
+    <End Role="Books" Type="Self.Book" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="QuanlisachcobanEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Authors" EntityType="Self.Author" />
+    <EntitySet Name="Books" EntityType="Self.Book" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Loans" EntityType="Self.Loan" />
+    <EntitySet Name="LoansItems" EntityType="Self.LoansItem" />
+    <EntitySet Name="Members" EntityType="Self.Member" />
+    <EntitySet Name="Reservations" EntityType="Self.Reservation" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__Books__categorie__5441852A" Association="Self.FK__Books__categorie__5441852A">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoansItem__book___5FB337D6" Association="Self.FK__LoansItem__book___5FB337D6">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="LoansItems" EntitySet="LoansItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reservati__book___6383C8BA" Association="Self.FK__Reservati__book___6383C8BA">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="Reservation" EntitySet="Reservations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Loans__member_id__5AEE82B9" Association="Self.FK__Loans__member_id__5AEE82B9">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="Loans" EntitySet="Loans" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Loans__user_id__5BE2A6F2" Association="Self.FK__Loans__user_id__5BE2A6F2">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Loans" EntitySet="Loans" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoansItem__loan___5EBF139D" Association="Self.FK__LoansItem__loan___5EBF139D">
+      <End Role="Loans" EntitySet="Loans" />
+      <End Role="LoansItems" EntitySet="LoansItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Members__user_id__4F7CD00D" Association="Self.FK__Members__user_id__4F7CD00D">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Members" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reservati__membe__628FA481" Association="Self.FK__Reservati__membe__628FA481">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="Reservation" EntitySet="Reservations" />
+    </AssociationSet>
+    <AssociationSet Name="BookAuthors" Association="Self.BookAuthors">
+      <End Role="Author" EntitySet="Authors" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
