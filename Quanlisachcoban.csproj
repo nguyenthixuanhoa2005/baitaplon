@@ -148,6 +148,12 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\images %281%29.png" />
+    <None Include="Resources\unnamed__1_-removebg-preview.png" />
+    <None Include="Resources\istockphoto-976849738-612x612.jpg" />
+    <None Include="Resources\pngtree-report-line-black-icon-png-image_4008047-removebg-preview.png" />
+    <None Include="Resources\Bieu-tuong-doc-sach-removebg-preview.png" />
+    <None Include="Resources\pngtree-home-icon-set-png-image_12380679-removebg-preview.png" />
     <None Include="Resources\lovepik-creative-three-hardcover-books-illustration-png-image_401276495_wh1200-removebg-preview.png" />
     <None Include="Resources\images-removebg-preview.png" />
     <None Include="Resources\images.png" />

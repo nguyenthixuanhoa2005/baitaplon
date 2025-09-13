@@ -4,7 +4,6 @@ D:\Kì 5\.NET\DemoSimple\Winform App Demo Simple 2 (CRUD)\QUANLISACH\Quanlisachc
 D:\Kì 5\.NET\DemoSimple\Winform App Demo Simple 2 (CRUD)\QUANLISACH\Quanlisachcoban\bin\Debug\EntityFramework.dll
 D:\Kì 5\.NET\DemoSimple\Winform App Demo Simple 2 (CRUD)\QUANLISACH\Quanlisachcoban\bin\Debug\EntityFramework.xml
 D:\Kì 5\.NET\DemoSimple\Winform App Demo Simple 2 (CRUD)\QUANLISACH\Quanlisachcoban\obj\Debug\Quanlisachcoban.csproj.AssemblyReference.cache
-D:\Kì 5\.NET\DemoSimple\Winform App Demo Simple 2 (CRUD)\QUANLISACH\Quanlisachcoban\obj\Debug\Quanlisachcoban.Form1.resources
 D:\Kì 5\.NET\DemoSimple\Winform App Demo Simple 2 (CRUD)\QUANLISACH\Quanlisachcoban\obj\Debug\Quanlisachcoban.Properties.Resources.resources
 D:\Kì 5\.NET\DemoSimple\Winform App Demo Simple 2 (CRUD)\QUANLISACH\Quanlisachcoban\obj\Debug\Quanlisachcoban.csproj.GenerateResource.cache
 D:\Kì 5\.NET\DemoSimple\Winform App Demo Simple 2 (CRUD)\QUANLISACH\Quanlisachcoban\obj\Debug\Quanlisachcoban.csproj.CoreCompileInputs.cache
@@ -12,3 +11,4 @@ D:\Kì 5\.NET\DemoSimple\Winform App Demo Simple 2 (CRUD)\QUANLISACH\Quanlisachc
 D:\Kì 5\.NET\DemoSimple\Winform App Demo Simple 2 (CRUD)\QUANLISACH\Quanlisachcoban\obj\Debug\Quanlisachcoban.exe
 D:\Kì 5\.NET\DemoSimple\Winform App Demo Simple 2 (CRUD)\QUANLISACH\Quanlisachcoban\obj\Debug\Quanlisachcoban.pdb
 D:\Kì 5\.NET\DemoSimple\Winform App Demo Simple 2 (CRUD)\QUANLISACH\Quanlisachcoban\obj\Debug\Quanlisachcoban.exe.config
+D:\Kì 5\.NET\DemoSimple\Winform App Demo Simple 2 (CRUD)\QUANLISACH\Quanlisachcoban\obj\Debug\Quanlisachcoban.Form1.resources

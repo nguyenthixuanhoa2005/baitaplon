@@ -16,25 +16,5 @@ namespace Quanlisachcoban
         {
             InitializeComponent();
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelDanhMucSach_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
