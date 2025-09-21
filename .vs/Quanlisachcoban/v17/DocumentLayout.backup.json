@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|solutionrelative:dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|d:\\k\u00EC 5\\.net\\demosimple\\winform app demo simple 2 (crud)\\quanlisach\\quanlisachcoban\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|solutionrelative:taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|solutionrelative:nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\qlsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|solutionrelative:qlsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6CC34BA4-C569-4E79-A717-03F9D2E14CA8}|Quanlisachcoban.csproj|solutionrelative:dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,46 +38,94 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\Form1.cs*",
-              "RelativeToolTip": "Form1.cs*",
-              "ViewState": "AgIAAA0AAAAAAAAAAAApwCkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T06:22:54.617Z",
+              "WhenOpened": "2025-09-17T07:50:10.267Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\Form1.cs [Design]*",
-              "RelativeToolTip": "Form1.cs [Design]*",
+              "ToolTip": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T05:50:13.628Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-09-17T07:11:48.589Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\Form1.Designer.cs*",
-              "RelativeToolTip": "Form1.Designer.cs*",
-              "ViewState": "AgIAABUDAAAAAAAAAAAAACcDAAAoAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "TaiKhoan.cs [Design]",
+              "DocumentMoniker": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\TaiKhoan.cs",
+              "RelativeDocumentMoniker": "TaiKhoan.cs",
+              "ToolTip": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\TaiKhoan.cs [Design]",
+              "RelativeToolTip": "TaiKhoan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T06:36:00.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T05:25:34.21Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NhanVien.cs [Design]",
+              "DocumentMoniker": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\NhanVien.cs",
+              "RelativeDocumentMoniker": "NhanVien.cs",
+              "ToolTip": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\NhanVien.cs [Design]",
+              "RelativeToolTip": "NhanVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T07:53:34.739Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "QLSach.cs [Design]",
+              "DocumentMoniker": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\QLSach.cs",
+              "RelativeDocumentMoniker": "QLSach.cs",
+              "ToolTip": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\QLSach.cs [Design]",
+              "RelativeToolTip": "QLSach.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T08:48:35.045Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DangKy.cs [Design]",
+              "DocumentMoniker": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\DangKy.cs",
+              "RelativeDocumentMoniker": "DangKy.cs",
+              "ToolTip": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\DangKy.cs [Design]",
+              "RelativeToolTip": "DangKy.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T09:53:33.635Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DangNhap.cs [Design]",
+              "DocumentMoniker": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\DangNhap.cs",
+              "RelativeDocumentMoniker": "DangNhap.cs",
+              "ToolTip": "D:\\K\u00EC 5\\.NET\\DemoSimple\\Winform App Demo Simple 2 (CRUD)\\QUANLISACH\\Quanlisachcoban\\DangNhap.cs [Design]",
+              "RelativeToolTip": "DangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T10:33:44.639Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -83,6 +83,16 @@ namespace Quanlisachcoban.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DangNhapThuVien {
+            get {
+                object obj = ResourceManager.GetObject("DangNhapThuVien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ea7199ded7e764bf24743cc7a0687a38 {
             get {
                 object obj = ResourceManager.GetObject("ea7199ded7e764bf24743cc7a0687a38", resourceCulture);
@@ -133,10 +143,40 @@ namespace Quanlisachcoban.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Khoa {
+            get {
+                object obj = ResourceManager.GetObject("Khoa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Khoa_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Khoa-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lovepik_creative_three_hardcover_books_illustration_png_image_401276495_wh1200_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("lovepik-creative-three-hardcover-books-illustration-png-image_401276495_wh1200-re" +
                         "movebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Nguoidung_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Nguoidung-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -164,6 +204,26 @@ namespace Quanlisachcoban.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SachDangNhap {
+            get {
+                object obj = ResourceManager.GetObject("SachDangNhap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SachDangNhap1 {
+            get {
+                object obj = ResourceManager.GetObject("SachDangNhap1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Search_Icon_svg {
             get {
                 object obj = ResourceManager.GetObject("Search_Icon.svg", resourceCulture);
@@ -177,6 +237,26 @@ namespace Quanlisachcoban.Properties {
         internal static System.Drawing.Bitmap unnamed__1__removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("unnamed__1_-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Vien_Tai_Khoan {
+            get {
+                object obj = ResourceManager.GetObject("Vien_Tai_Khoan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
