@@ -54,35 +54,17 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Quanlisachcoban.exe" size="3962336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Quanlisachcoban.exe" size="3917280">
       <assemblyIdentity name="Quanlisachcoban" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lDxAGEgpFM59mDLN9lB+HTF82/ojrvmTA6R188JkyPc=</dsig:DigestValue>
+        <dsig:DigestValue>ylnxfwYyrhWdJAWmuuOj7xsyXdjdcEfAHihRBSS30O8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Model1.Context.tt" size="26161">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>kPUO9AZGkFcmlYcMmFb0CsYuIDWorXFOuJTMrq9ltkk=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Model1.tt" size="28747">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>x9lKBd3kOcEQU7MEItzskHI7OK69hl6JIhPmuJy2eQU=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="Quanlisachcoban.exe.config" size="1179">
     <hash>
       <dsig:Transforms>
