@@ -3,6 +3,8 @@
 ![GitHub stars](https://img.shields.io/github/stars/nguyenthixuanhoa2005/baitaplon)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+---
+
 ## 📖 Mục lục
 - [Giới thiệu](#giới-thiệu)
 - [Tính năng](#tính-năng)
@@ -13,42 +15,52 @@
 ---
 
 ## 1. 👋 Giới thiệu
-Đây là phần mềm **Quản lý Thư viện** làm bằng Winform (C#), phù hợp cho các thư viện vừa và nhỏ ở trường học hoặc cơ quan. Ứng dụng giúp quản lý sách, bạn đọc, mượn/trả sách dễ dàng, giảm thất lạc và tiết kiệm thời gian ghi chép thủ công.
+**Hệ thống Quản lý Thư viện** là phần mềm được xây dựng bằng Winform (C#), phù hợp cho các thư viện vừa và nhỏ tại trường học hoặc cơ quan. Ứng dụng giúp quản lý sách, độc giả, nhân viên, quá trình mượn trả và thống kê hiệu quả.
 
 ---
 
-## 2. 🚀 Tính năng
-- **Quản lý sách:** Thêm, sửa, xóa sách, tìm kiếm theo mã sách, tên tác giả, thể loại,...
-- **Quản lý độc giả:** Lưu thông tin, tra cứu độc giả, xem lịch sử mượn trả sách.
+## 2. 🚀 Tính năng nổi bật
+- **Quản lý sách:** Thêm, sửa, xóa, tìm kiếm sách theo mã, tác giả, thể loại...
+- **Quản lý độc giả:** Lưu thông tin, tra cứu, xem lịch sử mượn trả.
 - **Quản lý nhân viên:** Thêm, sửa, xóa, tìm kiếm nhân viên thư viện.
-- **Mượn trả sách:** Lập phiếu mượn/trả, chỉnh sửa phiếu, chi tiết mượn trả, tính toán phí, quá hạn.
-- **Báo cáo thống kê:** Số lượng sách, độc giả, số sách đang mượn, đã mượn, top sách được mượn nhiều nhất,...
-- **Phân quyền truy cập:** Các chức năng được phân quyền theo đối tượng đăng nhập (admin, nhân viên,...).
+- **Mượn trả sách:** Tạo phiếu mượn/trả, chỉnh sửa phiếu, chi tiết mượn trả, tính phí, quản lý quá hạn.
+- **Báo cáo thống kê:** Số lượng sách, số độc giả, tình trạng mượn trả, top sách được mượn nhiều nhất...
+- **Phân quyền truy cập:** Phân quyền rõ ràng cho admin, nhân viên, đảm bảo an toàn dữ liệu.
 
 ---
 
-## 3. ⚙️ Công nghệ
+## 3. ⚙️ Công nghệ sử dụng
 - **Ngôn ngữ:** C# (.NET Framework)
-- **Giao diện:** Winform
+- **Giao diện:** Winform hiện đại, dễ sử dụng
 - **Cơ sở dữ liệu:** SQL Server
 
 ---
 
 ## 4. 🛠️ Hướng dẫn sử dụng
-1. Tải source về:
-   ```sh
-   git clone https://github.com/nguyenthixuanhoa2005/baitaplon.git
-   ```
-2. Mở bằng **Visual Studio**.
-3. Tạo database SQL Server theo mẫu (có file .sql đi kèm).
-4. Sửa chuỗi kết nối database trong file `App.config` cho đúng với máy bạn.
-5. Build và chạy chương trình, đăng nhập bằng tài khoản admin.
+
+### Bước 1: Tải mã nguồn
+```sh
+git clone https://github.com/nguyenthixuanhoa2005/baitaplon.git
+```
+
+### Bước 2: Mở bằng **Visual Studio**
+
+### Bước 3: Tạo database SQL Server theo mẫu (có file `.sql` đi kèm)
+
+### Bước 4: Sửa chuỗi kết nối database  
+Chỉnh sửa chuỗi kết nối trong file `App.config` phù hợp với máy bạn.
+
+### Bước 5: Build và chạy chương trình  
+Đăng nhập bằng tài khoản admin để sử dụng đầy đủ tính năng.
 
 ---
 
 ## 5. 🖼️ Demo giao diện
-![Giao diện chính](./img/main_screen.png)
+
+<p align="center">
+  <img src="./img/main_screen.png" alt="Giao diện chính" width="600"/>
+</p>
 
 ---
 
-*Chúc các bạn quản lý thư viện thật hiệu quả, bớt đau đầu với đống sách giấy tờ!*
+> 💡 *Chúc các bạn quản lý thư viện hiệu quả và bớt đau đầu với đống sách giấy tờ! Nếu có thắc mắc hay góp ý, hãy mở issue nhé.*
