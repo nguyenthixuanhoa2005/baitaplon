@@ -30,9 +30,10 @@
 ---
 
 ## 3. ⚙️ Công nghệ sử dụng
-- **Ngôn ngữ:** C# (.NET Framework)
+- **Ngôn ngữ:** C# (.NET Framework 4.7.2)
 - **Giao diện:** Winform hiện đại, dễ sử dụng
-- **Cơ sở dữ liệu:** SQL Server
+- **Cơ sở dữ liệu:** SQL Server với **Stored Procedures**
+- **Kết nối database:** ADO.NET (Raw SQL - không dùng Entity Framework)
 
 ---
 
@@ -45,13 +46,49 @@ git clone https://github.com/nguyenthixuanhoa2005/baitaplon.git
 
 ### Bước 2: Mở bằng **Visual Studio**
 
-### Bước 3: Tạo database SQL Server theo mẫu (có file `.sql` đi kèm)
+### Bước 3: Tạo database SQL Server
+
+Chạy lần lượt 2 file SQL trong thư mục `Database/`:
+
+1. **CreateDatabase.sql** - Tạo database và các bảng
+2. **StoredProcedures.sql** - Tạo các stored procedures
+
+Chi tiết xem file `Database/README.md`
 
 ### Bước 4: Sửa chuỗi kết nối database  
-Chỉnh sửa chuỗi kết nối trong file `App.config` phù hợp với máy bạn.
+
+Mở file `App.config` và chỉnh sửa connection string:
+
+```xml
+<connectionStrings>
+    <add name="QuanlisachcobanDB" 
+         connectionString="Data Source=TÊN_SERVER;Initial Catalog=Quanlisachcoban;Integrated Security=True;..." 
+         providerName="System.Data.SqlClient" />
+</connectionStrings>
+```
+
+Thay `TÊN_SERVER` bằng tên SQL Server của bạn (ví dụ: `localhost\SQLEXPRESS`)
 
 ### Bước 5: Build và chạy chương trình  
-Đăng nhập bằng tài khoản admin để sử dụng đầy đủ tính năng.
+
+Đăng nhập bằng tài khoản mặc định:
+- **Username**: admin
+- **Password**: admin123
+
+---
+
+## 📝 Thay đổi quan trọng
+
+✅ **Đã chuyển từ Entity Framework sang Raw SQL**
+- Sử dụng ADO.NET với SqlConnection và SqlCommand
+- Tất cả thao tác database thông qua stored procedures
+- Class DatabaseHelper để quản lý kết nối và thực thi SQL
+- Hiệu suất tốt hơn và kiểm soát tốt hơn
+
+📁 **Cấu trúc thư mục Database/**
+- `CreateDatabase.sql` - Script tạo database và bảng
+- `StoredProcedures.sql` - Tất cả stored procedures
+- `README.md` - Hướng dẫn chi tiết
 
 ---
 
