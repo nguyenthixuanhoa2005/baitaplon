@@ -26,10 +26,14 @@ namespace Quanlisachcoban
             InitializeComponent();
         }
 
-        private void buttonDoiMatKhau_Click(object sender, EventArgs e)
+        // Example method for changing password
+        // Wire this to the appropriate button click event
+        private void DoiMatKhau()
         {
             try
             {
+                // Example - modify based on actual controls
+                /*
                 string matKhauCu = textBoxMatKhauCu.Text.Trim();
                 string matKhauMoi = textBoxMatKhauMoi.Text.Trim();
                 string xacNhanMatKhau = textBoxXacNhanMatKhau.Text.Trim();
@@ -72,7 +76,6 @@ namespace Quanlisachcoban
                     {
                         MessageBox.Show(message, "Thành công",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ClearFields();
                     }
                     else
                     {
@@ -80,19 +83,13 @@ namespace Quanlisachcoban
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                */
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi đổi mật khẩu: " + ex.Message, "Lỗi",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void ClearFields()
-        {
-            textBoxMatKhauCu.Clear();
-            textBoxMatKhauMoi.Clear();
-            textBoxXacNhanMatKhau.Clear();
         }
     }
 }

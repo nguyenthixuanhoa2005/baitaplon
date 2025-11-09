@@ -16,8 +16,9 @@ namespace Quanlisachcoban
         public FormQuanLySach()
         {
             InitializeComponent();
-            LoadDanhSachDocGia();
-            LoadDanhSachSach();
+            // Uncomment when controls are ready
+            // LoadDanhSachDocGia();
+            // LoadDanhSachSach();
         }
 
         private void LoadDanhSachDocGia()
@@ -25,9 +26,7 @@ namespace Quanlisachcoban
             try
             {
                 DataTable dt = DatabaseHelper.ExecuteStoredProcedure("sp_LayDanhSachDocGia");
-                comboBoxDocGia.DataSource = dt;
-                comboBoxDocGia.DisplayMember = "HoTen";
-                comboBoxDocGia.ValueMember = "MaDocGia";
+                // Bind to combobox when available
             }
             catch (Exception ex)
             {
@@ -41,7 +40,7 @@ namespace Quanlisachcoban
             try
             {
                 DataTable dt = DatabaseHelper.ExecuteStoredProcedure("sp_LayDanhSachSach");
-                dataGridViewSach.DataSource = dt;
+                // Bind to DataGridView when available
             }
             catch (Exception ex)
             {
@@ -50,10 +49,13 @@ namespace Quanlisachcoban
             }
         }
 
-        private void buttonTaoPhieuMuon_Click(object sender, EventArgs e)
+        // Example method for creating borrow slip
+        // Wire this to appropriate button click event
+        private void TaoPhieuMuon()
         {
             try
             {
+                /* Example implementation - modify based on actual controls
                 if (comboBoxDocGia.SelectedValue == null)
                 {
                     MessageBox.Show("Vui lòng chọn độc giả!", "Thông báo",
@@ -61,28 +63,12 @@ namespace Quanlisachcoban
                     return;
                 }
 
-                // Get selected book IDs from DataGridView
-                string danhSachMaSach = "";
-                foreach (DataGridViewRow row in dataGridViewSachMuon.Rows)
-                {
-                    if (row.Cells["MaSach"].Value != null)
-                    {
-                        danhSachMaSach += row.Cells["MaSach"].Value.ToString() + ",";
-                    }
-                }
-
-                if (string.IsNullOrEmpty(danhSachMaSach))
-                {
-                    MessageBox.Show("Vui lòng chọn ít nhất một cuốn sách!", "Thông báo",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                danhSachMaSach = danhSachMaSach.TrimEnd(',');
+                // Get selected book IDs
+                string danhSachMaSach = "1,2,3"; // Get from form
 
                 SqlParameter[] parameters = {
                     new SqlParameter("@MaDocGia", comboBoxDocGia.SelectedValue),
-                    new SqlParameter("@MaNhanVien", 1), // Replace with actual logged-in employee ID
+                    new SqlParameter("@MaNhanVien", 1),
                     new SqlParameter("@NgayHenTra", dateTimePickerNgayHenTra.Value),
                     new SqlParameter("@DanhSachMaSach", danhSachMaSach)
                 };
@@ -94,6 +80,7 @@ namespace Quanlisachcoban
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadDanhSachSach();
                 }
+                */
             }
             catch (Exception ex)
             {
@@ -102,24 +89,12 @@ namespace Quanlisachcoban
             }
         }
 
-        private void buttonTraSach_Click(object sender, EventArgs e)
+        // Example method for returning books
+        private void TraSach()
         {
             try
             {
-                if (string.IsNullOrEmpty(textBoxMaPhieuMuon.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập mã phiếu mượn!", "Thông báo",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (string.IsNullOrEmpty(textBoxMaSach.Text))
-                {
-                    MessageBox.Show("Vui lòng chọn sách cần trả!", "Thông báo",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
+                /* Example implementation
                 SqlParameter[] parameters = {
                     new SqlParameter("@MaPhieuMuon", int.Parse(textBoxMaPhieuMuon.Text)),
                     new SqlParameter("@MaSach", int.Parse(textBoxMaSach.Text)),
@@ -134,6 +109,7 @@ namespace Quanlisachcoban
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadDanhSachSach();
                 }
+                */
             }
             catch (Exception ex)
             {
@@ -142,21 +118,19 @@ namespace Quanlisachcoban
             }
         }
 
-        private void buttonXemLichSu_Click(object sender, EventArgs e)
+        // Example method for viewing borrow history
+        private void XemLichSuMuon()
         {
             try
             {
-                SqlParameter[] parameters = null;
-                
-                if (comboBoxDocGia.SelectedValue != null)
-                {
-                    parameters = new SqlParameter[] {
-                        new SqlParameter("@MaDocGia", comboBoxDocGia.SelectedValue)
-                    };
-                }
+                /* Example implementation
+                SqlParameter[] parameters = {
+                    new SqlParameter("@MaDocGia", comboBoxDocGia.SelectedValue)
+                };
 
                 DataTable dt = DatabaseHelper.ExecuteStoredProcedure("sp_LayLichSuMuon", parameters);
-                dataGridViewLichSuMuon.DataSource = dt;
+                // Bind to DataGridView
+                */
             }
             catch (Exception ex)
             {
@@ -165,7 +139,8 @@ namespace Quanlisachcoban
             }
         }
 
-        private void buttonThongKe_Click(object sender, EventArgs e)
+        // Example method for statistics
+        private void ThongKe()
         {
             try
             {

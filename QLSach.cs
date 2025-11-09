@@ -16,8 +16,9 @@ namespace Quanlisachcoban
         public QLSach()
         {
             InitializeComponent();
-            LoadDanhSachSach();
-            LoadTheLoai();
+            // Uncomment when form is fully designed
+            // LoadDanhSachSach();
+            // LoadTheLoai();
         }
 
         private void panelDanhMucSach_Paint(object sender, PaintEventArgs e)
@@ -25,13 +26,16 @@ namespace Quanlisachcoban
 
         }
 
-        // Load book list
+        // Load book list - call this method when dataGridView1 is ready
         private void LoadDanhSachSach()
         {
             try
             {
                 DataTable dt = DatabaseHelper.ExecuteStoredProcedure("sp_LayDanhSachSach");
-                dataGridViewSach.DataSource = dt;
+                if (dataGridView1 != null)
+                {
+                    dataGridView1.DataSource = dt;
+                }
             }
             catch (Exception ex)
             {
@@ -40,18 +44,13 @@ namespace Quanlisachcoban
             }
         }
 
-        // Load categories
+        // Load categories - call this when comboBox for categories is ready
         private void LoadTheLoai()
         {
             try
             {
                 DataTable dt = DatabaseHelper.ExecuteStoredProcedure("sp_LayDanhSachTheLoai");
-                if (comboBoxTheLoai != null)
-                {
-                    comboBoxTheLoai.DataSource = dt;
-                    comboBoxTheLoai.DisplayMember = "TenTheLoai";
-                    comboBoxTheLoai.ValueMember = "MaTheLoai";
-                }
+                // Assign to appropriate comboBox when controls are defined
             }
             catch (Exception ex)
             {
@@ -60,12 +59,12 @@ namespace Quanlisachcoban
             }
         }
 
-        // Search books
-        private void buttonTimKiem_Click(object sender, EventArgs e)
+        // Example: Search books by keyword from textBoxTimKiem
+        private void TimKiemSach()
         {
             try
             {
-                string tuKhoa = textBoxTimKiem.Text.Trim();
+                string tuKhoa = textBoxTimKiem != null ? textBoxTimKiem.Text.Trim() : "";
                 
                 if (string.IsNullOrEmpty(tuKhoa))
                 {
@@ -78,7 +77,10 @@ namespace Quanlisachcoban
                 };
 
                 DataTable dt = DatabaseHelper.ExecuteStoredProcedure("sp_TimKiemSach", parameters);
-                dataGridViewSach.DataSource = dt;
+                if (dataGridView1 != null)
+                {
+                    dataGridView1.DataSource = dt;
+                }
             }
             catch (Exception ex)
             {
@@ -87,11 +89,15 @@ namespace Quanlisachcoban
             }
         }
 
-        // Add new book
-        private void buttonThem_Click(object sender, EventArgs e)
+        // Example method for adding a book
+        // Wire this to buttonThem.Click event handler
+        private void ThemSach()
         {
             try
             {
+                // Get values from form controls
+                // Example structure - modify based on actual controls:
+                /*
                 SqlParameter[] parameters = {
                     new SqlParameter("@TenSach", textBoxTenSach.Text.Trim()),
                     new SqlParameter("@TacGia", textBoxTacGia.Text.Trim()),
@@ -111,109 +117,14 @@ namespace Quanlisachcoban
                     MessageBox.Show(dt.Rows[0]["Message"].ToString(), "Thông báo",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadDanhSachSach();
-                    ClearFields();
                 }
+                */
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi thêm sách: " + ex.Message, "Lỗi",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        // Update book
-        private void buttonSua_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(textBoxMaSach.Text))
-                {
-                    MessageBox.Show("Vui lòng chọn sách cần sửa!", "Thông báo",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                SqlParameter[] parameters = {
-                    new SqlParameter("@MaSach", int.Parse(textBoxMaSach.Text)),
-                    new SqlParameter("@TenSach", textBoxTenSach.Text.Trim()),
-                    new SqlParameter("@TacGia", textBoxTacGia.Text.Trim()),
-                    new SqlParameter("@NhaXuatBan", textBoxNhaXuatBan.Text.Trim()),
-                    new SqlParameter("@NamXuatBan", int.Parse(textBoxNamXuatBan.Text)),
-                    new SqlParameter("@MaTheLoai", comboBoxTheLoai.SelectedValue),
-                    new SqlParameter("@SoLuong", int.Parse(textBoxSoLuong.Text)),
-                    new SqlParameter("@GiaSach", decimal.Parse(textBoxGiaSach.Text)),
-                    new SqlParameter("@ViTri", textBoxViTri.Text.Trim()),
-                    new SqlParameter("@TrangThai", comboBoxTrangThai.Text),
-                    new SqlParameter("@MoTa", textBoxMoTa.Text.Trim())
-                };
-
-                DataTable dt = DatabaseHelper.ExecuteStoredProcedure("sp_SuaSach", parameters);
-                if (dt.Rows.Count > 0)
-                {
-                    MessageBox.Show(dt.Rows[0]["Message"].ToString(), "Thông báo",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadDanhSachSach();
-                    ClearFields();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi sửa sách: " + ex.Message, "Lỗi",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        // Delete book
-        private void buttonXoa_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(textBoxMaSach.Text))
-                {
-                    MessageBox.Show("Vui lòng chọn sách cần xóa!", "Thông báo",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa sách này?", "Xác nhận",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    SqlParameter[] parameters = {
-                        new SqlParameter("@MaSach", int.Parse(textBoxMaSach.Text))
-                    };
-
-                    DataTable dt = DatabaseHelper.ExecuteStoredProcedure("sp_XoaSach", parameters);
-                    if (dt.Rows.Count > 0)
-                    {
-                        MessageBox.Show(dt.Rows[0]["Message"].ToString(), "Thông báo",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LoadDanhSachSach();
-                        ClearFields();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi xóa sách: " + ex.Message, "Lỗi",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void ClearFields()
-        {
-            textBoxMaSach.Clear();
-            textBoxTenSach.Clear();
-            textBoxTacGia.Clear();
-            textBoxNhaXuatBan.Clear();
-            textBoxNamXuatBan.Clear();
-            textBoxSoLuong.Clear();
-            textBoxGiaSach.Clear();
-            textBoxViTri.Clear();
-            textBoxMoTa.Clear();
-            if (comboBoxTheLoai != null && comboBoxTheLoai.Items.Count > 0)
-                comboBoxTheLoai.SelectedIndex = 0;
         }
     }
 }

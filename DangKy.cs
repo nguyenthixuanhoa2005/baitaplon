@@ -18,14 +18,13 @@ namespace Quanlisachcoban
             InitializeComponent();
         }
 
-        private void buttonDangKy_Click(object sender, EventArgs e)
+        private void buttonTaoTaiKhoan_Click(object sender, EventArgs e)
         {
             try
             {
                 string tenDangNhap = textBoxTaiKhoan.Text.Trim();
                 string matKhau = textBoxMatKhau.Text.Trim();
-                string xacNhanMatKhau = textBoxXacNhanMatKhau.Text.Trim();
-                string email = textBoxEmail.Text.Trim();
+                string xacNhanMatKhau = textBox1.Text.Trim(); // textBox1 is for confirm password
 
                 // Validate input
                 if (string.IsNullOrEmpty(tenDangNhap) || string.IsNullOrEmpty(matKhau))
@@ -53,7 +52,7 @@ namespace Quanlisachcoban
                 SqlParameter[] parameters = {
                     new SqlParameter("@TenDangNhap", tenDangNhap),
                     new SqlParameter("@MatKhau", matKhau),
-                    new SqlParameter("@Email", string.IsNullOrEmpty(email) ? (object)DBNull.Value : email),
+                    new SqlParameter("@Email", DBNull.Value),
                     new SqlParameter("@VaiTro", "DocGia")
                 };
 
